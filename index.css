@@ -1,0 +1,192 @@
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+                table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+                table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f8f8f8;
+        }
+        h3 {
+    transition: color 0.3s ease;
+}
+
+button {
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    color: grey;
+}
+
+.visible {
+    color: green;
+}
+@keyframes animacao{
+    from {
+       background: #F51C2B;
+    }
+    to {
+       background: #F5233A;
+    }
+} 
+@keyframes bom {
+    0% {
+        color: #F51C2B;
+        font-size: 14px; /* Ajuste o tamanho da fonte se necessário */
+    }
+    50% {
+        color: #D4233A;
+        font-size: 16px; /* Ajuste o tamanho da fonte se necessário */
+    }
+    100% {
+        color: #F51C2B;
+        font-size: 14px; /* Ajuste o tamanho da fonte se necessário */
+    }
+}
+
+.bom {
+    color: #F51C2B;
+    animation-name: bom;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Ajustado para remover margem indesejada */
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.aleta{
+	color: red;
+}
+.title {
+    font-size: 24px;
+    margin-bottom: 60px; /* Espaçamento entre o título e o coração */
+    animation: colorChange 3s infinite; /* Aplica a animação de cor ao texto */
+    color: #FF0800; /* Define a cor inicial do texto */
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #FF0800;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: pulse 1.5s infinite, heartColorChange 3s infinite; /* Animação separada para a cor do coração */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: inherit; /* Herda a cor do elemento principal */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0;
+}
+
+.heart::after {
+    left: 50px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: rotate(-45deg) scale(1);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #FF0800;
+    }
+    50% {
+        color: #FF5349;
+    }
+    100% {
+        color: #FF0800;
+    }
+}
+
+@keyframes heartColorChange {
+    0% {
+        background-color: #FF0800;
+    }
+    50% {
+        background-color: #FF5349;
+    }
+    100% {
+        background-color: #FF0800;
+    }
+}
